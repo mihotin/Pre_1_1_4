@@ -13,8 +13,7 @@ public class Main {
         userService.saveUser("Петя", "Оля", (byte) 20);
         userService.saveUser("Аня", "Таня", (byte) 22);
         userService.getAllUsers();
-        userService.dropUsersTable();
-        userService.dropUsersTable();
+
 
 //        UserDao users = new UserDaoJDBCImpl();
 //        users.createUsersTable();
