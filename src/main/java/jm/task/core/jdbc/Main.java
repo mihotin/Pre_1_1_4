@@ -9,9 +9,12 @@ public class Main {
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
-        userService.saveUser("Вася", "Пупкин", (byte) 18);
-        userService.saveUser("Петя", "Оля", (byte) 20);
-        userService.saveUser("Аня", "Таня", (byte) 22);
+        userService.saveUser("Саша", "Батырев", (byte) 18);
+        userService.saveUser("Андрей", "Кирдяпкин", (byte) 20);
+        userService.saveUser("Алексей", "Хрупало", (byte) 22);
+        userService.saveUser("Борис", "Манджиев", (byte) 50);
         userService.getAllUsers();
+        userService.cleanUsersTable();
+        userService.dropUsersTable();
     }
 }
