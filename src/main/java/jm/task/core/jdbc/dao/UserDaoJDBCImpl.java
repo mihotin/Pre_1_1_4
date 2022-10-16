@@ -30,12 +30,11 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void saveUser(String name, String lastName, byte age) {
         try ( PreparedStatement preparedStatement = Util.getConnection().prepareStatement(
-                "INSERT INTO Users VALUES (?, ?, ?, ?)")) {
+                "INSERT INTO Users(name, lastName, age) VALUES (?, ?, ?)")) {
 
-            preparedStatement.setLong(1, 0);
-            preparedStatement.setString(2, name);
-            preparedStatement.setString(3, lastName);
-            preparedStatement.setByte(4, age);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setByte(3, age);
             preparedStatement.executeUpdate();
 
             System.out.println("User с именем – " + name + " добавлен в базу данных");
